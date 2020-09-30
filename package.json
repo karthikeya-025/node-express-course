@@ -18,7 +18,6 @@
     "url": "https://github.com/karthikeya-025/node-express-course/issues"
   },
   "homepage": "https://github.com/karthikeya-025/node-express-course#readme",
-
   "dependencies": {
     "express": "^4.17.1"
   }
