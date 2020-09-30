@@ -6,11 +6,12 @@ const mockUserData =[
     {name:'Jill'}
 ]
 
-app.get('/users',function(req,res){
+app.get('/users/:id',function(req,res){
+    console.log(req.params.id)
     res.json({
         success: true,
-        message: "Succesfully got the users data!",
-        users: mockUserData
+        message: "Got one user!",
+        users: req.params.id
     })
 })
-app.listen(8000,function(){console.log("The server is listening!")})
+app.listen(8080,function(){console.log("The server is listening!")})
