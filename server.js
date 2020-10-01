@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const bodyparser = require('body-parser');
-app.use(bodyparser.json());
+const bodyParser = require('body-parser');
+app.use(bodyParser.json())
 
 const mockUserData =[
     {name:'Mark'},
@@ -23,11 +23,11 @@ app.post('/login',function(req,res){
     const mockUsername = "BillytheKid"
     const mockPassword = "supersecret"
 
-    if(username==mockUsername && password == mockPassword){
+    if(username===mockUsername && password===mockPassword){
         res.json({
             success : true,
             message : 'Username and password matched',
-            token: 'The login token goes here'
+            token: 'encrypted token goes here'
         })
     }else{
         res.json({
@@ -36,4 +36,4 @@ app.post('/login',function(req,res){
         })
     }
 })
-app.listen(8080,function(){console.log("The server is listening!")})
+app.listen(9000,function(){console.log("The server is listening!")})
